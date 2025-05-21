@@ -18,7 +18,7 @@ app.use(express.urlencoded({ extended: true })) // for parsing application/x-www
 app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocs)); // Serve Swagger UI
 const userRouter=require("./routers/userRouters")
 const riderRouter=require("./routers/riderRouters")
-const authMiddleware = require("./middelwares/AuthMiddelware")
+
 app.use("/api/user",userRouter)
 app.use("/api/rider",riderRouter)
 

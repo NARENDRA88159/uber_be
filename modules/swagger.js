@@ -10,6 +10,7 @@ const swaggerOptions = {
       version: "1.0.0",
       description: "API documentation for my uber project",
     },
+    host: "localhost:9000",
     servers: [{ url: "http://localhost:9000" }], // URL of your server
     tags: [
         {
@@ -23,6 +24,14 @@ const swaggerOptions = {
     ],
   
   },
+  info: {
+    title: "Uber APIs",
+    version: "1.0.0",
+    description: "API documentation for my Uber project",
+},
+host: "localhost:9000", // Correct host and port
+schemes: ["http"], // Use 'https' if deployed securely
+
   
   apis: ["./swagger/*.js"], // This is where your API routes are documented
 };

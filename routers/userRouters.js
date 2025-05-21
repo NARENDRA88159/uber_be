@@ -4,7 +4,8 @@ const User = require('../Model/user');
 const { hashPassword, comparePassword } = require('../modules/passwordEncryption');
 const { generateToken } = require('../modules/jwt');
 const { registerUser, loginUser, getUserProfile } = require('../controllers/userController');
-const authMiddleware = require('../middelwares/AuthMiddelware');
+const { authMiddleware } = require('../middelwares/AuthMiddelware');
+
 
  
 router.post('/register', registerUser);

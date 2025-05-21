@@ -1,11 +1,11 @@
 {
   "swagger": "2.0",
   "info": {
+    "title": "Uber APIs",
     "version": "1.0.0",
-    "title": "REST API",
-    "description": ""
+    "description": "API documentation for my Uber project"
   },
-  "host": "localhost:3000",
+  "host": "localhost:9000",
   "basePath": "/",
   "schemes": [
     "http"
@@ -186,6 +186,26 @@
           }
         }
       }
+    },
+    "/api/rider/profile": {
+      "post": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "401": {
+            "description": "Unauthorized"
+          }
+        }
+      }
     }
   },
   "definitions": {
@@ -209,6 +229,10 @@
           "example": "API documentation for my uber project"
         }
       }
+    },
+    "host": {
+      "type": "string",
+      "example": "localhost:9000"
     },
     "servers": {
       "type": "array",

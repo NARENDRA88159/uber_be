@@ -18,7 +18,8 @@ const riderSchema = new mongoose.Schema({
     password: {
         type: String, // Fixed typo from "tyep" to "type"
         required: true,
-        minlength: [6, "Password must be at least 6 characters long"]
+        minlength: [6, "Password must be at least 6 characters long"],
+        select: false 
     },
     socketId: {
         type: String,
