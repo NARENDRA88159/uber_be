@@ -44,7 +44,7 @@ console.log("body",req.body)
 const riderLogin=async (req,res)=>{
      try{
     const {email,password}=req.body
-    isEmailExist=await Rider.findOne({email,email});
+    isEmailExist=await Rider.findOne({email,email}).select("+password");
     if(!isEmailExist){
         return res.status(400).json({"message":"This email is not  exists"})
     }
@@ -58,7 +58,13 @@ const riderLogin=async (req,res)=>{
 }
 }
 
+const riderProfile=async(req,res)=>{
+return res.status(200).json({"message":"rider profile","data":req.rider})
+
+}
+
 module.exports = {
     riderRegister,
-    riderLogin
+    riderLogin,
+    riderProfile
 }
