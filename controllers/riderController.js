@@ -29,8 +29,11 @@ console.log("body",req.body)
             capacity: vehicle.capacity,
             vehicleType: vehicle.vehicleType,
            },
-            lat: location.lat,
-            lng: location.lng,
+           location:{
+            lat: location?.lat,
+            lng: location?.lng,
+           },
+           
             isOnline: isOnline,
         });
 

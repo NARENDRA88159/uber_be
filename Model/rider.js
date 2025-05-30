@@ -51,12 +51,14 @@ const riderSchema = new mongoose.Schema({
     location: {
         lat:{
             type: Number,
+            required: false
             
         },
         lng:{
             type: Number,
+            required: false
             
-        },},
+        }},
         
     isOnline: {
         type: Boolean,
